@@ -1,0 +1,57 @@
+.content {
+  padding: 10px;
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+img {
+  height: 50vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  padding: 10px;
+  background-color:rgba(41, 41, 41, 0.4);
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(41, 41, 41, 0.7);
+}
+
+nav svg {
+  margin-left: 1vw;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color:rgba(41, 41, 41, 0.6);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 10px;
+}
