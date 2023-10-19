@@ -33,6 +33,12 @@ nav a {
   color: rgba(41, 41, 41, 0.7);
 }
 
+.dark-mode nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+
 nav svg {
   margin-left: 1vw;
 }

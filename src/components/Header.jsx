@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({theme, setTheme}) => {
   return (
     <header>
       <nav>
@@ -29,20 +29,13 @@ const Header = () => {
             <a href="#contact">CONTACT</a>
           </li>
           <li>
-            <button id="theme-btn" onClick={function(e) { 
-                let newText = (e.innerText === "Dark Mode" ? "Light Mode" : "Dark Mode");
-                let oldThemeClass = (e.innerText === "Dark Mode" ? "dark-mode" : "light-mode");
-                let newThemeClass = (e.innerText === "Dark Mode" ? "light-mode" : "dark-mode");
-
-                document.getElementById('theme-btn').innerText = newText;
-
-                let elementsToUpdateClass = document.getElementsByClassName(oldThemeClass);
-                for(let i = 0; i < elementsToUpdateClass.length; i++) {
-                  debugger;
-                  elementsToUpdateClass[i].classList.remove(oldThemeClass);
-                  elementsToUpdateClass[i].classList.add(newThemeClass);
-                }
-             }}>theme button</button>
+            <button onClick={() => {
+              if(theme === 'light-mode'){
+                setTheme('dark-mode')
+              } else {
+                setTheme('light-mode')
+              }
+            }}>{theme === 'light-mode'? 'Light Mode': "Dark Mode"}</button>
           </li>
         </ul>
       </nav>
